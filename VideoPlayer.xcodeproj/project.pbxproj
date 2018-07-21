@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF75CAB786D098CFD8D202D6 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5872B20E068678ED2CE020A8 /* Pods_VideoPlayer.framework */; };
 		F86EEC60210350E000D62391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EEC5F210350E000D62391 /* AppDelegate.swift */; };
 		F86EEC62210350E000D62391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EEC61210350E000D62391 /* ViewController.swift */; };
 		F86EEC65210350E000D62391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86EEC63210350E000D62391 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E3C41C032F407306E57C482 /* Pods-VideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		4AA34332B520ADD168A802BA /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		5872B20E068678ED2CE020A8 /* Pods_VideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86EEC5C210350E000D62391 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86EEC5F210350E000D62391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F86EEC61210350E000D62391 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF75CAB786D098CFD8D202D6 /* Pods_VideoPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B9622AD336A05C9C0202171 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E3C41C032F407306E57C482 /* Pods-VideoPlayer.debug.xcconfig */,
+				4AA34332B520ADD168A802BA /* Pods-VideoPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD6A3B8B303D83756ADF3CB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5872B20E068678ED2CE020A8 /* Pods_VideoPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F86EEC53210350E000D62391 = {
 			isa = PBXGroup;
 			children = (
 				F86EEC5E210350E000D62391 /* VideoPlayer */,
 				F86EEC5D210350E000D62391 /* Products */,
+				0B9622AD336A05C9C0202171 /* Pods */,
+				AD6A3B8B303D83756ADF3CB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F86EEC6E210350E400D62391 /* Build configuration list for PBXNativeTarget "VideoPlayer" */;
 			buildPhases = (
+				538EA2269F58E72D0D971BF7 /* [CP] Check Pods Manifest.lock */,
 				F86EEC58210350E000D62391 /* Sources */,
 				F86EEC59210350E000D62391 /* Frameworks */,
 				F86EEC5A210350E000D62391 /* Resources */,
+				31B446AD2FCBC895DD890312 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31B446AD2FCBC895DD890312 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		538EA2269F58E72D0D971BF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F86EEC58210350E000D62391 /* Sources */ = {
@@ -278,6 +343,7 @@
 		};
 		F86EEC6F210350E400D62391 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E3C41C032F407306E57C482 /* Pods-VideoPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +362,7 @@
 		};
 		F86EEC70210350E400D62391 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA34332B520ADD168A802BA /* Pods-VideoPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
