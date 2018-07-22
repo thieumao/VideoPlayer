@@ -83,5 +83,13 @@ extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(playlists[indexPath.row].title)
         print(playlists[indexPath.row].id)
+        openViewController(playlists[indexPath.row].id)
+    }
+    
+    private func openViewController(_ id: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        controller.playlistID = id
+        self.present(controller, animated: true, completion: nil)
     }
 }
