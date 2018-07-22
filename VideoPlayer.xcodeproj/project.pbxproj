@@ -17,6 +17,8 @@
 		F86EEC67210350E400D62391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86EEC66210350E400D62391 /* Assets.xcassets */; };
 		F86EEC6A210350E400D62391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86EEC68210350E400D62391 /* LaunchScreen.storyboard */; };
 		F88657302104B3AB0063EA4A /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F886572F2104B3AB0063EA4A /* Playlist.swift */; };
+		F88657382104F4780063EA4A /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F88657342104F4780063EA4A /* MGSwipeTableCell.m */; };
+		F88657392104F4780063EA4A /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F88657352104F4780063EA4A /* MGSwipeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,11 @@
 		F86EEC69210350E400D62391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86EEC6B210350E400D62391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F886572F2104B3AB0063EA4A /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		F88657332104F4770063EA4A /* VideoPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		F88657342104F4780063EA4A /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
+		F88657352104F4780063EA4A /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
+		F88657362104F4780063EA4A /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
+		F88657372104F4780063EA4A /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +93,7 @@
 		F86EEC5E210350E000D62391 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				F88657312104F4520063EA4A /* Libs */,
 				F886572E2104B37F0063EA4A /* Model */,
 				F86EEC66210350E400D62391 /* Assets.xcassets */,
 				F86EEC6B210350E400D62391 /* Info.plist */,
@@ -106,6 +114,26 @@
 				F886572F2104B3AB0063EA4A /* Playlist.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F88657312104F4520063EA4A /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				F88657322104F45F0063EA4A /* MGSwipeTableCell */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		F88657322104F45F0063EA4A /* MGSwipeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				F88657362104F4780063EA4A /* MGSwipeButton.h */,
+				F88657352104F4780063EA4A /* MGSwipeButton.m */,
+				F88657372104F4780063EA4A /* MGSwipeTableCell.h */,
+				F88657342104F4780063EA4A /* MGSwipeTableCell.m */,
+				F88657332104F4770063EA4A /* VideoPlayer-Bridging-Header.h */,
+			);
+			path = MGSwipeTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +170,7 @@
 				TargetAttributes = {
 					F86EEC5B210350E000D62391 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -186,14 +215,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
@@ -228,10 +255,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F83B5CA1210372BB004B4495 /* ItemTableViewCell.swift in Sources */,
+				F88657382104F4780063EA4A /* MGSwipeTableCell.m in Sources */,
 				F86EEC62210350E000D62391 /* ViewController.swift in Sources */,
 				F86EEC60210350E000D62391 /* AppDelegate.swift in Sources */,
 				F83B5C9D21036256004B4495 /* ListViewController.swift in Sources */,
 				F88657302104B3AB0063EA4A /* Playlist.swift in Sources */,
+				F88657392104F4780063EA4A /* MGSwipeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +405,7 @@
 			baseConfigurationReference = 2E3C41C032F407306E57C482 /* Pods-VideoPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z4ZNZ62PTW;
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
@@ -386,6 +416,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thieumao.VideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoPlayer/Libs/MGSwipeTableCell/VideoPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -396,6 +428,7 @@
 			baseConfigurationReference = 4AA34332B520ADD168A802BA /* Pods-VideoPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z4ZNZ62PTW;
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
@@ -406,6 +439,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thieumao.VideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoPlayer/Libs/MGSwipeTableCell/VideoPlayer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

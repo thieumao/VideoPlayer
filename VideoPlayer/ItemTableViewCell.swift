@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MGSwipeTableCell
 
 class ItemTableViewCell: MGSwipeTableCell {
     

@@ -1,13 +1,11 @@
 PODS:
   - Alamofire (4.7.2)
-  - MGSwipeTableCell (1.6.6)
   - SwiftLint (0.25.1)
   - SwiftyJSON (4.1.0)
   - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - MGSwipeTableCell
   - SwiftLint
   - SwiftyJSON (~> 4.0)
   - YouTubePlayer
@@ -15,18 +13,16 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - MGSwipeTableCell
     - SwiftLint
     - SwiftyJSON
     - YouTubePlayer
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  MGSwipeTableCell: c3bc6e261e7bc06c112909fe3fb8205de286082c
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 33360ea54bf329384763c1e59b8dd41d246d8770
+PODFILE CHECKSUM: 0ac2d714d3a9046203f6a0b66da88f74a23862be
 
 COCOAPODS: 1.5.3
