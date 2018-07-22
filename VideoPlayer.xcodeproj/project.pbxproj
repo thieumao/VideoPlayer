@@ -16,6 +16,7 @@
 		F86EEC65210350E000D62391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86EEC63210350E000D62391 /* Main.storyboard */; };
 		F86EEC67210350E400D62391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86EEC66210350E400D62391 /* Assets.xcassets */; };
 		F86EEC6A210350E400D62391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86EEC68210350E400D62391 /* LaunchScreen.storyboard */; };
+		F88657302104B3AB0063EA4A /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F886572F2104B3AB0063EA4A /* Playlist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F86EEC66210350E400D62391 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F86EEC69210350E400D62391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86EEC6B210350E400D62391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F886572F2104B3AB0063EA4A /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		F86EEC5E210350E000D62391 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				F886572E2104B37F0063EA4A /* Model */,
 				F86EEC66210350E400D62391 /* Assets.xcassets */,
 				F86EEC6B210350E400D62391 /* Info.plist */,
 				F86EEC5F210350E000D62391 /* AppDelegate.swift */,
@@ -95,6 +98,14 @@
 				F83B5CA0210372BB004B4495 /* ItemTableViewCell.xib */,
 			);
 			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		F886572E2104B37F0063EA4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F886572F2104B3AB0063EA4A /* Playlist.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +185,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +231,7 @@
 				F86EEC62210350E000D62391 /* ViewController.swift in Sources */,
 				F86EEC60210350E000D62391 /* AppDelegate.swift in Sources */,
 				F83B5C9D21036256004B4495 /* ListViewController.swift in Sources */,
+				F88657302104B3AB0063EA4A /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z4ZNZ62PTW;
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z4ZNZ62PTW;
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

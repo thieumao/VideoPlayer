@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        youtubePlayerView.loadVideoID("xkhu732v3Wo")
+        youtubePlayerView.loadPlaylistID("PLe6dgR6eSaYHe8hwvyl8MixHQS6YjSgQY")
+        // youtubePlayerView.loadVideoID("xkhu732v3Wo")
     }
 
 

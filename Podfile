@@ -7,5 +7,8 @@ target 'VideoPlayer' do
 
   # Pods for VideoPlayer
   pod 'YouTubePlayer'
-
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'MGSwipeTableCell'
+  pod 'SwiftLint'
+  pod 'Alamofire', '~> 4.7'
 end
