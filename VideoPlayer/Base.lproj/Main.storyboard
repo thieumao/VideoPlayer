@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fbl-7H-ZWr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5bb-9d-Ttr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -89,5 +89,43 @@
             </objects>
             <point key="canvasLocation" x="832.79999999999995" y="123.68815592203899"/>
         </scene>
+        <!--Force Touch View Controller-->
+        <scene sceneID="nEE-07-b8o">
+            <objects>
+                <viewController id="5bb-9d-Ttr" customClass="ForceTouchViewController" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZCF-ht-hme">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="BxI-6A-JLL">
+                                <rect key="frame" x="53" y="251.5" width="269" height="163"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="forceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qT0-2R-zDD">
+                                <rect key="frame" x="146.5" y="100" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qT0-2R-zDD" firstAttribute="centerX" secondItem="ZCF-ht-hme" secondAttribute="centerX" id="7lO-qa-iMR"/>
+                            <constraint firstItem="qT0-2R-zDD" firstAttribute="top" secondItem="kC6-OY-5W2" secondAttribute="top" constant="80" id="FbC-E7-X53"/>
+                            <constraint firstItem="BxI-6A-JLL" firstAttribute="centerY" secondItem="ZCF-ht-hme" secondAttribute="centerY" id="VVD-jG-5Vb"/>
+                            <constraint firstItem="BxI-6A-JLL" firstAttribute="centerX" secondItem="ZCF-ht-hme" secondAttribute="centerX" id="voD-0R-clO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kC6-OY-5W2"/>
+                    </view>
+                    <connections>
+                        <outlet property="forceLabel" destination="qT0-2R-zDD" id="PgA-Py-sRF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZf-tt-HxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="807"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Line" width="269" height="163"/>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2239F5210562930005B610 /* ForceTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2239F4210562930005B610 /* ForceTouchViewController.swift */; };
 		CF75CAB786D098CFD8D202D6 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5872B20E068678ED2CE020A8 /* Pods_VideoPlayer.framework */; };
 		F83B5C9D21036256004B4495 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B5C9C21036256004B4495 /* ListViewController.swift */; };
 		F83B5CA1210372BB004B4495 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B5C9F210372BB004B4495 /* ItemTableViewCell.swift */; };
@@ -25,6 +26,7 @@
 		2E3C41C032F407306E57C482 /* Pods-VideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		4AA34332B520ADD168A802BA /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		5872B20E068678ED2CE020A8 /* Pods_VideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2239F4210562930005B610 /* ForceTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchViewController.swift; sourceTree = "<group>"; };
 		F83B5C9C21036256004B4495 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F83B5C9F210372BB004B4495 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		F83B5CA0210372BB004B4495 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				F83B5C9C21036256004B4495 /* ListViewController.swift */,
 				F83B5C9F210372BB004B4495 /* ItemTableViewCell.swift */,
 				F83B5CA0210372BB004B4495 /* ItemTableViewCell.xib */,
+				CF2239F4210562930005B610 /* ForceTouchViewController.swift */,
 			);
 			path = VideoPlayer;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				F83B5CA1210372BB004B4495 /* ItemTableViewCell.swift in Sources */,
 				F88657382104F4780063EA4A /* MGSwipeTableCell.m in Sources */,
+				CF2239F5210562930005B610 /* ForceTouchViewController.swift in Sources */,
 				F86EEC62210350E000D62391 /* ViewController.swift in Sources */,
 				F86EEC60210350E000D62391 /* AppDelegate.swift in Sources */,
 				F83B5C9D21036256004B4495 /* ListViewController.swift in Sources */,

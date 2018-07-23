@@ -8,15 +8,41 @@
 
 import UIKit
 
+enum Shortcut: String {
+    case openBlue = "OpenApp"
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window?.backgroundColor = UIColor.red
         return true
+    }
+
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        _ = handleQuickAction(shortcutItem)
+    }
+
+    private func handleQuickAction(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
+
+        var quickActionHandled = false
+        guard let type = shortcutItem.type.components(separatedBy: ".").last else { return false }
+        if let shortcutType = Shortcut.init(rawValue: type) {
+            switch shortcutType {
+            case .openBlue:
+//                self.window?.backgroundColor = UIColor(red: 151.0/255.0, green: 187.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+                self.window?.backgroundColor = UIColor.yellow
+                quickActionHandled = true
+            }
+        } else {
+            self.window?.backgroundColor = UIColor(red: 151.0/255.0, green: 187.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        }
+
+        return quickActionHandled
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

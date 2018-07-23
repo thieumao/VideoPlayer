@@ -45,5 +45,18 @@
     <dict>
         <key>NSAllowsArbitraryLoads</key><true/>
     </dict>
+    <key>UIApplicationShortcutItems</key>
+    <array>
+        <dict>
+            <key>UIApplicationShortcutItemIconFile</key>
+            <string>OpenApp</string>
+            <key>UIApplicationShortcutItemSubtitle</key>
+            <string>Open video player</string>
+            <key>UIApplicationShortcutItemTitle</key>
+            <string>Open App</string>
+            <key>UIApplicationShortcutItemType</key>
+            <string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenBlue</string>
+        </dict>
+    </array>
 </dict>
 </plist>
