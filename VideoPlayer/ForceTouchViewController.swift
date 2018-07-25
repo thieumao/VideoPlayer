@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ForceTouchViewController: UIViewController {
 
@@ -15,12 +17,20 @@ class ForceTouchViewController: UIViewController {
     private var translateApiKey = "trnsl.1.1.20180724T020055Z.05f75e8e2f5db66d.b224594bfd6854abb7d4cdd287efe1a1ae394cee"
     private var translateApiLink = "https://translate.yandex.net/api/v1.5/tr.json/translate"
 
+    private var result: String? {
+        didSet {
+            if let value = result {
+                print(value)
+            }
+        }
+    }
+
     @IBOutlet weak var forceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let mao = getEnViLink("I love you")
-        print(mao)
+        translateEnVi("I love you")
+        translateViEn("Anh ơi")
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -63,5 +73,44 @@ extension ForceTouchViewController {
 
     func getTranslateApiLink(_ key: String, _ from: String, _ to: String, _ text: String) -> String {
         return "\(translateApiLink)?key=\(key)&lang=\(from)-\(to)&text=\(text)"
+    }
+}
+
+// MARK: Network
+extension ForceTouchViewController {
+    // translate Vietnamese into English
+    func translateViEn(_ text: String) {
+        let link = getViEnLink(text)
+        guard let encodeLink = link.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed) else {
+            return
+        }
+        callAPI(text, encodeLink)
+    }
+
+    // translate English into Vietnamse
+    func translateEnVi(_ text: String) {
+        let link = getEnViLink(text)
+        guard let encodeLink = link.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed) else {
+            return
+        }
+        callAPI(text, encodeLink)
+    }
+
+    private func callAPI(_ text: String, _ link: String) {
+        Alamofire.request(link).responseJSON { [weak self] responseData in
+            guard let `self` = self, let value = responseData.result.value else {
+                return
+            }
+            self.parseJson(value)
+        }
+    }
+
+    private func parseJson(_ value: Any) {
+        let json = JSON(value)
+        guard let text = json["text"].arrayObject as? [String], !text.isEmpty else {
+            result = nil
+            return
+        }
+        result = text[0]
     }
 }
