@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SQLite
 
 class ForceTouchViewController: UIViewController {
 
@@ -31,6 +32,31 @@ class ForceTouchViewController: UIViewController {
         super.viewDidLoad()
         translateEnVi("I love you")
         translateViEn("Anh ơi")
+        open()
+    }
+
+    var DB_NAME = "data.db"
+
+    func open(dbPath: String = "") {
+        var dbURL: URL
+        if dbPath.isEmpty {
+            guard let url = Bundle.main.resourceURL else { return }
+            dbURL = url.appendingPathComponent(DB_NAME)
+        } else {
+            dbURL = URL(fileURLWithPath: dbPath)
+        }
+        print(dbURL.absoluteString)
+        guard let db = try? Connection(dbURL.absoluteString) else {
+            print("Error: Connect Database failed")
+            return
+        }
+        guard let stmt = try? db.prepare("SELECT * FROM dictionary") else {
+            print("Error: SQL query wrong")
+            return
+        }
+        for row in stmt {
+            print("id: \(row[0]), short: \(row[1]), vi: \(row[2]), en: \(row[3])")
+        }
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

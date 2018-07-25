@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF2239F5210562930005B610 /* ForceTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2239F4210562930005B610 /* ForceTouchViewController.swift */; };
+		CF6395C621087D1C0051F264 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = CF6395C521087D1B0051F264 /* data.db */; };
 		CF75CAB786D098CFD8D202D6 /* Pods_VideoPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5872B20E068678ED2CE020A8 /* Pods_VideoPlayer.framework */; };
 		F83B5C9D21036256004B4495 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B5C9C21036256004B4495 /* ListViewController.swift */; };
 		F83B5CA1210372BB004B4495 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B5C9F210372BB004B4495 /* ItemTableViewCell.swift */; };
@@ -27,6 +28,7 @@
 		4AA34332B520ADD168A802BA /* Pods-VideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		5872B20E068678ED2CE020A8 /* Pods_VideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2239F4210562930005B610 /* ForceTouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchViewController.swift; sourceTree = "<group>"; };
+		CF6395C521087D1B0051F264 /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		F83B5C9C21036256004B4495 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F83B5C9F210372BB004B4495 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		F83B5CA0210372BB004B4495 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF6395C2210879BC0051F264 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF6395C521087D1B0051F264 /* data.db */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F86EEC53210350E000D62391 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		F86EEC5E210350E000D62391 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				CF6395C2210879BC0051F264 /* Resources */,
 				F88657312104F4520063EA4A /* Libs */,
 				F886572E2104B37F0063EA4A /* Model */,
 				F86EEC66210350E400D62391 /* Assets.xcassets */,
@@ -203,6 +214,7 @@
 				F83B5CA2210372BB004B4495 /* ItemTableViewCell.xib in Resources */,
 				F86EEC6A210350E400D62391 /* LaunchScreen.storyboard in Resources */,
 				F86EEC67210350E400D62391 /* Assets.xcassets in Resources */,
+				CF6395C621087D1C0051F264 /* data.db in Resources */,
 				F86EEC65210350E000D62391 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,12 +230,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VideoPlayer/Pods-VideoPlayer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);

@@ -11,4 +11,5 @@ target 'VideoPlayer' do
 #  pod 'MGSwipeTableCell'
   pod 'SwiftLint'
   pod 'Alamofire', '~> 4.7'
+  pod 'SQLite.swift', '~> 0.11.5'
 end
