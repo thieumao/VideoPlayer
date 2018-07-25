@@ -21,6 +21,7 @@
 		F88657302104B3AB0063EA4A /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F886572F2104B3AB0063EA4A /* Playlist.swift */; };
 		F88657382104F4780063EA4A /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F88657342104F4780063EA4A /* MGSwipeTableCell.m */; };
 		F88657392104F4780063EA4A /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F88657352104F4780063EA4A /* MGSwipeButton.m */; };
+		F8B26A312108FD57007A9D90 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B26A302108FD57007A9D90 /* TranslateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		F88657352104F4780063EA4A /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
 		F88657362104F4780063EA4A /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
 		F88657372104F4780063EA4A /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
+		F8B26A302108FD57007A9D90 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				F83B5C9F210372BB004B4495 /* ItemTableViewCell.swift */,
 				F83B5CA0210372BB004B4495 /* ItemTableViewCell.xib */,
 				CF2239F4210562930005B610 /* ForceTouchViewController.swift */,
+				F8B26A302108FD57007A9D90 /* TranslateViewController.swift */,
 			);
 			path = VideoPlayer;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				CF2239F5210562930005B610 /* ForceTouchViewController.swift in Sources */,
 				F86EEC62210350E000D62391 /* ViewController.swift in Sources */,
 				F86EEC60210350E000D62391 /* AppDelegate.swift in Sources */,
+				F8B26A312108FD57007A9D90 /* TranslateViewController.swift in Sources */,
 				F83B5C9D21036256004B4495 /* ListViewController.swift in Sources */,
 				F88657302104B3AB0063EA4A /* Playlist.swift in Sources */,
 				F88657392104F4780063EA4A /* MGSwipeButton.m in Sources */,

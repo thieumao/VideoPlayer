@@ -72,42 +72,93 @@
             </objects>
             <point key="canvasLocation" x="1772" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Translate View Controller-->
         <scene sceneID="yML-Qb-NI7">
             <objects>
-                <viewController id="qaa-P0-Jnd" sceneMemberID="viewController">
+                <viewController id="qaa-P0-Jnd" customClass="TranslateViewController" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VMR-vq-om4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I love you" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-mf-HOb">
-                                <rect key="frame" x="0.0" y="45" width="375" height="233.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-mf-HOb">
+                                <rect key="frame" x="10" y="79.5" width="355" height="133.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Anh yêu em" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nQo-bb-aTA">
-                                <rect key="frame" x="0.0" y="378.5" width="375" height="233.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nQo-bb-aTA">
+                                <rect key="frame" x="10" y="293" width="355" height="133.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vietnamese" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wt8-9w-oPw">
+                                <rect key="frame" x="10" y="270.5" width="355" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGb-FG-as3">
+                                <rect key="frame" x="10" y="57.5" width="355" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsh-OM-flv">
+                                <rect key="frame" x="288" y="233" width="52" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="V - E"/>
+                                <connections>
+                                    <action selector="translateVietnameseIntoEnglish:" destination="qaa-P0-Jnd" eventType="touchUpInside" id="sOj-fp-dWV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk9-pa-5Uf">
+                                <rect key="frame" x="35" y="233" width="52" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="E - V"/>
+                                <connections>
+                                    <action selector="translateEnglishIntoVietnamse:" destination="qaa-P0-Jnd" eventType="touchUpInside" id="HPf-mb-izI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="yn9-mf-HOb" firstAttribute="trailing" secondItem="f1k-BE-9xw" secondAttribute="trailing" id="01A-QR-s1a"/>
-                            <constraint firstItem="nQo-bb-aTA" firstAttribute="leading" secondItem="f1k-BE-9xw" secondAttribute="leading" id="3JT-yJ-032"/>
-                            <constraint firstItem="yn9-mf-HOb" firstAttribute="height" secondItem="VMR-vq-om4" secondAttribute="height" multiplier="1:2" constant="-100" id="GAb-JI-4JM"/>
-                            <constraint firstItem="yn9-mf-HOb" firstAttribute="top" secondItem="f1k-BE-9xw" secondAttribute="top" constant="25" id="f4Q-81-S47"/>
-                            <constraint firstItem="nQo-bb-aTA" firstAttribute="trailing" secondItem="f1k-BE-9xw" secondAttribute="trailing" id="jCt-fI-3KE"/>
+                            <constraint firstItem="yn9-mf-HOb" firstAttribute="trailing" secondItem="f1k-BE-9xw" secondAttribute="trailing" constant="-10" id="01A-QR-s1a"/>
+                            <constraint firstItem="f1k-BE-9xw" firstAttribute="trailing" secondItem="Rsh-OM-flv" secondAttribute="trailing" constant="35" id="1sq-XF-JPn"/>
+                            <constraint firstItem="Gk9-pa-5Uf" firstAttribute="leading" secondItem="f1k-BE-9xw" secondAttribute="leading" constant="35" id="35b-mr-u8r"/>
+                            <constraint firstItem="yn9-mf-HOb" firstAttribute="height" secondItem="VMR-vq-om4" secondAttribute="height" multiplier="1:2" constant="-200" id="GAb-JI-4JM"/>
+                            <constraint firstItem="Gk9-pa-5Uf" firstAttribute="centerY" secondItem="VMR-vq-om4" secondAttribute="centerY" constant="-80" id="WwW-Of-8KZ"/>
+                            <constraint firstItem="Wt8-9w-oPw" firstAttribute="leading" secondItem="nQo-bb-aTA" secondAttribute="leading" id="ZTB-Bg-3rn"/>
+                            <constraint firstItem="nQo-bb-aTA" firstAttribute="top" secondItem="Wt8-9w-oPw" secondAttribute="bottom" constant="5" id="cFj-mh-uok"/>
+                            <constraint firstItem="nQo-bb-aTA" firstAttribute="leading" secondItem="yn9-mf-HOb" secondAttribute="leading" id="cRt-Ac-wz6"/>
+                            <constraint firstItem="Rsh-OM-flv" firstAttribute="centerY" secondItem="Gk9-pa-5Uf" secondAttribute="centerY" id="ezI-Hr-PYz"/>
+                            <constraint firstItem="bGb-FG-as3" firstAttribute="trailing" secondItem="yn9-mf-HOb" secondAttribute="trailing" id="jhF-Je-23a"/>
+                            <constraint firstItem="yn9-mf-HOb" firstAttribute="top" secondItem="bGb-FG-as3" secondAttribute="bottom" constant="5" id="lIA-wG-hiY"/>
+                            <constraint firstItem="Wt8-9w-oPw" firstAttribute="trailing" secondItem="nQo-bb-aTA" secondAttribute="trailing" id="nXC-Nw-P8g"/>
                             <constraint firstItem="nQo-bb-aTA" firstAttribute="height" secondItem="yn9-mf-HOb" secondAttribute="height" id="pjb-Ni-TVv"/>
-                            <constraint firstItem="nQo-bb-aTA" firstAttribute="top" secondItem="yn9-mf-HOb" secondAttribute="bottom" constant="100" id="qcz-Gs-nTu"/>
-                            <constraint firstItem="yn9-mf-HOb" firstAttribute="leading" secondItem="f1k-BE-9xw" secondAttribute="leading" id="xZP-Rz-2WF"/>
+                            <constraint firstItem="nQo-bb-aTA" firstAttribute="top" secondItem="yn9-mf-HOb" secondAttribute="bottom" constant="80" id="qcz-Gs-nTu"/>
+                            <constraint firstItem="Gk9-pa-5Uf" firstAttribute="top" secondItem="yn9-mf-HOb" secondAttribute="bottom" constant="20" id="wFb-zE-4fD"/>
+                            <constraint firstItem="yn9-mf-HOb" firstAttribute="leading" secondItem="f1k-BE-9xw" secondAttribute="leading" constant="10" id="xZP-Rz-2WF"/>
+                            <constraint firstItem="nQo-bb-aTA" firstAttribute="trailing" secondItem="yn9-mf-HOb" secondAttribute="trailing" id="y8e-Vc-X6B"/>
+                            <constraint firstItem="bGb-FG-as3" firstAttribute="leading" secondItem="yn9-mf-HOb" secondAttribute="leading" id="yhG-3V-m2i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f1k-BE-9xw"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lTV-yy-pAY" appends="YES" id="HcG-WV-XAX"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="englishTextView" destination="yn9-mf-HOb" id="nsa-S7-zlK"/>
+                        <outlet property="vietnameseTextView" destination="nQo-bb-aTA" id="BG2-l8-OL3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjR-aV-V6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lTV-yy-pAY">
+                    <connections>
+                        <action selector="tap:" destination="qaa-P0-Jnd" id="sUf-PR-Ygk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1799.2" y="827.13643178410803"/>
         </scene>
