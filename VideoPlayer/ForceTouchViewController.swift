@@ -30,9 +30,9 @@ class ForceTouchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        translateEnVi("I love you")
-        translateViEn("Anh ơi")
-        open()
+//        translateEnVi("I love you")
+//        translateViEn("Anh ơi")
+//        open()
     }
 
     var DB_NAME = "data.db"
